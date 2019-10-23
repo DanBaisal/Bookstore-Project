@@ -1,0 +1,72 @@
+body {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+header {
+    margin-left: 15%;
+}
+
+input {
+    margin-left: 40%;
+    text-align: center;
+    padding: 5px 50px;
+    border-color: aqua;
+}
+
+hr {
+    border: none;
+    height: 1.5px;
+    background-color: grey;
+}
+
+.flipping-container {
+    perspective: 1000px;
+    
+
+}
+
+.flipping-container:hover .flipper, .flipping-container.hover.flipper {
+    
+    transform: rotateY(180deg);
+    
+}
+
+
+.flipper {
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    position: relative;
+    
+}
+
+.btn-danger {
+    backface-visibility: hidden;
+    
+}
+
+.front-view, .back-view {
+    backface-visibility: hidden;
+    
+    
+}
+
+.front-view {
+    z-index: 2;
+    width: 30%;
+    height: 30%;
+}
+
+.back-view {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 50%;
+    padding-bottom: 30%;
+    background-color: lightgray
+}
+
+.detail {
+    visibility: hidden;
+}
